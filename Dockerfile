@@ -20,5 +20,5 @@ ENV NAME World
 CMD ["python", "server.py"]
 
 # docker build -t keylogger_server .
-# docker run --name=keylogger_server -p 7779:7777 keylogger_server
+# docker run -v /Keylogger/log:/app/log --name=keylogger_server -p 7799:7777 keylogger_server
 
