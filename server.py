@@ -20,12 +20,6 @@ class User:
         self.data = self.conn.recv(1024).decode('utf-8')
         
     def PrintData(self):
-        file_name = self.addr
-        file_name = "".join(map(str, file_name))
-        file_name = file_name.replace('\\',"")
-        file_name = file_name.replace('\'',"")
-        file_name = file_name.replace('(',"")
-        file_name = file_name.replace(')',"")
         with open(f"./log/{self.addr}",'a+') as f:
             f.write(self.data+'\n')
         # print(f"{self.addr} send: {self.data}")      
