@@ -20,7 +20,7 @@ class User:
         self.data = self.conn.recv(1024).decode('utf-8')
         
     def PrintData(self):
-        with open(f"/app/{self.addr}",'w+') as f:
+        with open(f"./log/{self.addr}",'a+') as f:
             f.write(self.data+'\n')
         # print(f"{self.addr} send: {self.data}")      
         

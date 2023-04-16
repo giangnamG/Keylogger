@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    container_name: keylogger_server
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 7799:7777
+    volumes:
+      - ./:/app/

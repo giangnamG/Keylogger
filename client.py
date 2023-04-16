@@ -32,6 +32,7 @@ class App:
                 self.PushStream()
                 self.data = ""
 if __name__ == '__main__':
-    client = App('157.245.150.103',7799)
+    client = App('127.0.0.1',7799)
+    # client = App('157.245.150.103',7799)
     client.listen()
     
